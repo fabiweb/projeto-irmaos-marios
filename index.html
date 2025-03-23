@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Bros</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+      <div> <class=".mascara-formulario" onclick="esconderform()"></div>
+
+    <div>
+        <img src="./img/logo-header.png" alt="logo-header.png" class="logo-header">
+        <a>Home</a>;
+        <a href="nossos-servicos.html">Nossos Serviços></a>;
+        <a>Fale Conosco</a>;
+    </div>
+
+
+    <div class="caixa-mae">
+        <div class="caixa-principal">
+            <img src="./img/logo.png" alt="logo do mario bros" class="logo-mario">
+            <p>
+                Encanadores Mario & Luigi - Resolvendo Seus Problemas Hidráulicos Com Estilo!
+            </p>
+
+            <p>
+                Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos
+                entupidos ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia!
+                Apresentamos a vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!
+            </p>
+
+        
+
+            <button onclick="mostrarform()">Entre em Contato</button>
+          
+
+        </div>
+
+        <div>
+            <img src="img/logo.mario.png" alt="logo mario e luigi" class="mario-luigi">
+        </div>
+
+
+    </div>
+
+    <div>
+        <video src="./img/video.mp4" autoplay muted loop class="mp4"></video>
+        <div class="mascara"></div>
+    </div>
+
+
+    <a href= "https://wa.me/5566999333789?text=Quero%20falar%20com%20os%20Irm%C3%A3os%20Marios"class="link-whatsapp">
+        <img src="./img/whatsapp.png" alt="link para whatsapp"> 
+    </a>
+
+    <form  class="formulario-fale-conosco"
+        action="https://formcarry.com/s/uL5GHImACOL"
+        method="POST"></method
+        enctype="multipart/form-data">
+      <input placeholder="Seu Nome" type="text" name="nome">
+      <input placeholder="Seu Telefone" type="tel" name="telefone">
+      <textarea placeholder="Digite seu Problema Aqui..." name="duvida"></textarea> 
+      <button type="submit" Orçamento></button>
+   
+    </form>
+
+
+
+    <style>
+        img {
+            height: 300px;
+
+        }
+        
+        button {
+            background-color: #c51111;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            width: 200px;
+            height: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+    
+
+        .mp4 {
+            position: fixed;
+            top: 0;
+            z-index: -1;
+
+        }
+
+
+        .caixa-mae {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 100px;
+            height: 100vh;
+          
+        }
+
+        caixa-principal {
+            font-weight: 40%;
+        }
+
+        .mp4 {
+            width: 100vw
+        }
+
+        .mascara {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+            position: fixed;
+            top: 0;
+            z-index: -1; 
+            transition: visibility 1s ease-in-out; 
+    
+            }
+
+          p{
+              color: white;
+              font-size: 20px;
+          }
+      
+        
+        .link-whatsapp img{
+            height: 60px;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+
+        }
+
+
+        .header {
+            font-display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 30px;
+        }
+
+        .logo-header {
+            height: 60px;    
+        }
+
+       a {
+           color: white;
+           font-size: 24px;
+           cursor: pointer;
+           text-decoration: none;
+       }
+
+       a:hover{
+           color: #c51111;
+           font-size: 26px;
+           transition: 0.5s ease-in-out;
+       }
+        
+       .formulario-fale-conosco {
+           visibility: hidden;
+           background-color: white;
+           display: flex;
+           gap: 20px;
+           flex-direction: column;
+           position: fixed;
+           top: 30%;
+           left: -300px;
+           padding: 20px;
+           border-radius: 5px;
+           transition: left 1s ease-in-out;
+       }
+      
+       input {
+           height: 40px;
+           border-right: 5px;
+           border: 1px solid gray;
+           padding-left: 5px;
+           outline-color: #18D80F;
+
+       }
+
+       textarea {
+           width: 270px;
+           height: 100px;
+           border-radius: 5px;
+           border: 1px solid gray;
+           padding-left: 5px;
+           outline-color: #18D80F;
+        
+       }
+
+    
+
+      </style>
+
+      </body>
+
+     
+        <script> 
+        src="script.js" 
+      
+
+        const form = document.querySelector (".formulario-fale-conosco")
+        const mascara = document.querySelector(".mascara-formulario")
+
+
+        function mostrarform() {
+            form.style.left = "50%";
+            form.style.transform = "translatex(-50%)";
+            form.style.visibility ="visible";
+            
+        }
+
+        function esconderform() {
+            form.style.left = "-300px";
+            form.style.transform = "translatex (0)";
+            mascara.tyle.visibility="hidden";
+
+        }
+    
+
+
+        </script>
+      
+    
+      </html>
